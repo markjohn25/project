@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div id="navigation">
+        <ul class="nav-list">
+            <li id="js-show-all">show all contacts</li>
+            <li id="js-search">search</li>
+            <li id="js-add-new">add new contact</li>
+    
+        </ul>
+    </div>
+    <div id="search-panel" class="panel">
+        <h1>search contacts</h1>
+        <form id="search" action="#">
+            <div id="results">
+    
+            </div>
+            <div>
+                <label>
+                    <input type="text"
+                    name="search" id="search"
+                    placeholder="enter name of contact" />
+                </label>
+            </div>
+                     <input type="submit"
+                     value="submit" />
+        </form>
+    </div>
+         <div id="contact-panel" class="panel">
+             <form id="contact" action="#">
+             <h1>add a new contact</h1>
+             <div>
+                 <label>
+                     <input type="text" name="person" id="name" placeholder="mark john" />
+    
+                 </label>
+                 <label>
+                     <input type="text" name="phone" id="name" placeholder="1234567890" />
+    
+                 </label>
+                 <label>
+                     <input type="text" name="email" id="name" placeholder="markjohn@gmail.com" />
+    
+                 </label>
+             </div>
+             <div>
+                 <input type="submit" value="submit" />
+             </div>
+             </form>
+         </div>
+         <div id="show-panel" class="panel">
+             
+         </div>
+
+
+ <script src="addressbook.js"></script>r        
+</body>
+</html>
