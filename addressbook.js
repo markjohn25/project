@@ -12,11 +12,22 @@
         
       ],
       addNewContact:function(name,phone,email){
-        this.data.push({
-          name: name,
-          phone: phone,
-          email:email
-        });
+       let contacts = localStorage.getItem('contacts')
+       let data = {
+        name: name,
+        phone: phone,
+        email:email
+      }
+       if(contacts){
+        let newcontacts = JSON.parse(contacts)
+        newcontacts.push(data);
+        localStorage.setItem('contacts', JSON.stringify(newcontacts))
+       }
+       else{
+        let newcontacts = [];
+        newcontacts.push(data);
+        localStorage.setItem('contacts', JSON.stringify(newcontacts))
+       }
         return this;
       },
       save:function(){
@@ -105,8 +116,8 @@
      for(var i = 0;i<results.length;i++){
        document.getElementById('results').innerHTML += '<div class="contact-item">Name:'+results[i].name+'<br>Phone:'+results[i].phone+'<br>Email:'+results[i].email+'</div><hr>';
      }
-   } else{
-    document.getElementById('results').innerHTML += '<div class="contact-item">There are no results for this name</div><hr>';
+     } else{
+    document.getElementById('results').innerHTML += '<div class="contact-item">THERE ARE NO RESULT FOR THIS NAME</div><hr>';
    }
    
    
@@ -116,8 +127,8 @@
  document.getElementById('js-show-all').addEventListener('click', function(){
    if(window.contactList){ 
       document.getElementById('show-panel').innerHTML = '';
-    var contacts = contactList.returnAll();
-     console.log(contacts);
+    var contacts = JSON.parse(localStorage.getItem('contacts'))
+  
      if(contacts.length>0){
        for(var i = 0;i<contacts.length;i++){
        document.getElementById('show-panel').innerHTML += '<div class="contact-item">Name:'+contacts[i].name+'<br>Phone:'+contacts[i].phone+'<br>Email:'+contacts[i].email+'</div><hr>';

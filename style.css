@@ -1,26 +1,34 @@
 body{
-  font-family:sans-serif;
-  
-	background: linear-gradient(30deg, rgba(66,181,213,0.5) 0%, rgba(58,210,11,0.5), 100%);
+  font-family:serif ;
+  background-color: black;
 }
 
 h1{
   font-size:1.2em;
-  text-align:center;
+  text-align:left;
 }
 
 .panel{
-  background:rgb(250,250,250);
+  background:rgba(242, 244, 245, 0.699);
   padding:1em;
   width:92.5%;
   margin:auto;
   max-width:30em;
 }
 
+input[type="submit"] {
+  padding: left;
+  padding-left: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  color: rgb(240, 235, 235);
+  background-color: rgb(18, 18, 19);
+}
+
 input{
   width:100%;
   box-sizing:border-box;
-  font-size:1em;
+   font-size:  1em;
   margin-top:0.5em;
   padding:0.5em;
 }
@@ -32,14 +40,18 @@ input:focus{
 input::after{
   width:100%;
   height:10px;
-  background:red;
+  background:rgb(235, 20, 4);
+  
 }
+
 .nav-list{
   width:92.5%;
-  max-width:30em;
-  text-align:center;
-  margin:auto;
-  
+  max-width:60em;
+  text-align:justify;
+  margin:length;
+  background-color: rgb(10, 10, 49);
+  font-size: medium;
+  font-style: bold;
   
 }
 li{
@@ -48,6 +60,7 @@ li{
       background:rgba(256,256,256,0.5);
       padding:0.7em;
       margin:0 0.1em;
+      
     }
     li.active{
         background-color:rgba(256,256,256,0.95);
